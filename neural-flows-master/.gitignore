@@ -1,0 +1,29 @@
+# stubs directory 
+dir_to_ignore/
+
+# output data
+output_data/
+
+# output data
+dev-scripts/
+
+# graohic output
+image_frames/
+
+# generic storage directory
+scratch/
+
+
+# temp files
+*.asv
+*.m~
+*.mat
+
+# graphic files
+*.jpeg
+*.jpg
+*.png
+*.tiff
+*.pdf
+*.svg
+*.fig

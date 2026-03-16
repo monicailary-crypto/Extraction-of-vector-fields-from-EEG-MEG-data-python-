@@ -1,0 +1,9 @@
+function save_params_checkpoint(tmp_params)
+% Dummy function that saves json output params up to a point in the code
+% Downside - it ovewrites the file if it exists
+read_write_json(tmp_params.general.params.output.file.name, ...
+                tmp_params.general.params.output.file.dir, ...
+                'write', ...
+                tmp_params)
+
+end

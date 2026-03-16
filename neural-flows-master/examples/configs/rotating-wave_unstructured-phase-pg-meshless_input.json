@@ -1,0 +1,126 @@
+{
+  "general": {
+    "params": {
+        "input": {
+          "file": {
+            "name": "",
+            "dir":  "" 
+          }
+          },
+        "output": {
+          "file": {
+            "name": "rotating-wave_unstructured-phase-pg-meshless_output.json",
+            "dir": "examples/configs"} 
+        }
+    },
+    "storage": {
+      "time_stamp": [],
+      "dir_out": "scratch",
+      "dir_tmp": "/tmp",
+      "format": "iomat"
+    },
+    "parallel": {
+      "enabled": false,
+      "workers_fraction": 0.8
+    }
+  },
+  "interpolation": {
+    "enabled": false
+    },
+  "flows": {
+    "enabled": true,
+    "file": {
+      "exists": false,
+      "keep": true,
+      "dir": "",
+      "name": "",
+      "label": ""
+    },
+    "modality": "phase",
+    "method": {
+      "name": "phase-gradient",
+      "implementation": "meshless",
+      "cnem": {
+        "convex_hull": "bi"
+      }
+    },
+    "visualisation": {
+      "enabled": true
+    },
+    "decomposition": {
+      "svd": {
+        "enabled": true,
+        "modes": 4,
+        "grid": {
+          "type": "unstructured"
+        }
+      }
+    },
+    "quantification": {
+      "energy": {
+        "enabled": false,
+        "modality": "nodal"
+      }
+    }
+  },
+  "streamlines": {
+      "enabled": false,
+      "file": {
+          "exists": false,
+          "dir": "",
+          "name": "",
+          "label": "",
+          "keep": true
+    },
+      "trace_pathlines": false, 
+      "tracing": {
+               "implementation": "meshless", 
+               "seeding_points": {
+                                  "modality": "random-sparse",
+                                  "seed": 42
+              },
+              "max_stream_length" : 200,
+              "step_size": 0.5
+          },
+
+    "visualisation": {
+      "enabled": true
+    }
+  },
+  "singularity": {
+    "enabled": false,
+    "visualisation": {
+      "enabled": false
+    },
+    "quantification": {
+      "enabled": false
+    }
+  },
+  "data": {
+    "file": {
+      "dir": "demo-data",
+      "name": "rotating_wave_W_c1_d1ms_iomat.mat"
+    },
+    "slice": {
+      "enabled": false,
+      "id": 0
+    },
+    "grid": {
+      "type": "unstructured"
+    },
+    "resolution": {
+      "ht": [],
+      "hx": [],                                       
+      "hy": [],
+      "hz": [],
+      "units": {
+         "space":"mm",                                
+          "time": "ms"                               
+     }
+  },
+    "boundary": {
+      "alpha_radius" : 30
+    },
+    "modality": "amplitude"
+  }
+}
