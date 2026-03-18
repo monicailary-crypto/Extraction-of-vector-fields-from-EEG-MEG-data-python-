@@ -23,5 +23,12 @@ end
 
 Grad_V=B*V;
 Grad_V_mat=reshape(Grad_V,4,[]).';
+% reshape è una funzione nativa di MATLAB.
+% Cosa fa: Prende il vettore Grad_V e lo ridispone in una matrice con 4 righe.
+% Perché 4?: Il metodo C-NEM calcola per ogni punto quattro valori: la derivata rispetto a $x$, quella rispetto a $y$, quella rispetto a $z$ e, solitamente, il valore della funzione originale filtrato (o una quarta componente di errore/interpolazione).
+% .': È l'operatore di trasposizione (scambia righe con colonne).
 
 out=Grad_V_mat(:,1:3); % 4th column is V
+% Anche questa è un'operazione standard di indicizzazione di MATLAB.
+% Prende tutte le righe (:) ma solo le prime tre colonne (1:3).
+% In questo modo, "scarta" la quarta colonna di servizio e ti restituisce solo i vettori spaziali $\nabla \phi = [\frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z}]$.

@@ -89,7 +89,7 @@ normgradphip=sqrt(dphidxp.^2+dphidyp.^2+dphidzp.^2);
 vnormp=abs(dphidtp)./normgradphip;
 
 v.vnormp=vnormp;
-if ~speedonlyflag
+if ~speedonlyflag   %speedonlyflag = 0
     v.vxp=vnormp.*-dphidxp./normgradphip; % magnitude * unit vector component
     v.vyp=vnormp.*-dphidyp./normgradphip;
     v.vzp=vnormp.*-dphidzp./normgradphip;
