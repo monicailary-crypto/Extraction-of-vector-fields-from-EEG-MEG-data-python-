@@ -103,14 +103,14 @@ CC =
 
   struct with fields:
 
-      cc: [nlags × nwindows double] - cross-correlation function
-      cl: [nlags × 1 double]        - lags
-      ct: [nwindows × 1 double]     - window times
-    opts: [1×1 struct]
-      n1: [1×length(n1) double]
-      n2: [1×length(n2) double]
+      cc: [nlags ï¿½ nwindows double] - cross-correlation function
+      cl: [nlags ï¿½ 1 double]        - lags
+      ct: [nwindows ï¿½ 1 double]     - window times
+    opts: [1ï¿½1 struct]
+      n1: [1ï¿½length(n1) double]
+      n2: [1ï¿½length(n2) double]
 
-Runtime <1 s for the 1001 × 513 input matrix provided in exampletimeseries.mat.
+Runtime <1 s for the 1001 ï¿½ 513 input matrix provided in exampletimeseries.mat.
 
 To plot the output:
 
@@ -133,11 +133,11 @@ v=
 
   struct with fields:
 
-   vnormp: [Ntimepoints × nnodes double] - instantaneous speed at each node and time point
-      vxp: [Ntimepoints × nnodes double] - x component of velocity at each node and time point
-      vyp: [Ntimepoints × nnodes double] - y component of velocity at each node and time point
-      vzp: [Ntimepoints × nnodes double] - z component of velocity at each node and time point
+   vnormp: [Ntimepoints ï¿½ nnodes double] - instantaneous speed at each node and time point
+      vxp: [Ntimepoints ï¿½ nnodes double] - x component of velocity at each node and time point
+      vyp: [Ntimepoints ï¿½ nnodes double] - y component of velocity at each node and time point
+      vzp: [Ntimepoints ï¿½ nnodes double] - z component of velocity at each node and time point
 
-Runtime <1 s for the 1001 × 513 input matrix provided in exampletimeseries.mat.
+Runtime <1 s for the 1001 ï¿½ 513 input matrix provided in exampletimeseries.mat.
 
 
