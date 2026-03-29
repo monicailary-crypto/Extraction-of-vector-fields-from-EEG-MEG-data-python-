@@ -1,2 +1,26 @@
 ds004504/
+# Ambienti Virtuali (Python)
+compila-cnem-venv/
+venv/
+.venv/
+env/
+
+# File di dati pesanti (MATLAB/Python)
 *.mat
+*.npy
+*.npz
+
+# File compilati C++ e Python
+__pycache__/
+*.pyc
+*.pyd
+*.obj
+*.o
+*.exe
+*.dll
+
+# Cartelle di build e temporanee
+build/
+dist/
+.idea/
+.vscode/
